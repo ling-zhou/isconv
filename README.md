@@ -1,4 +1,4 @@
 isconv
 ======
 
-integer string conversion
+fast integer string conversion

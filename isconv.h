@@ -69,7 +69,7 @@ static inline uint Int10ToStrImpl(TInt val, char* dst, bool leading_zero = false
     {
         *(uint64*)dst = *(const uint64*)"00000000"; // fill leading zero for high
         dst[8] = '0';
-        val_len = (high != 0) ? 10 - hnode.len - lnode.len : 10 - lnode.len;
+        val_len = (high != 0) ? 5 - hnode.len : 10 - lnode.len;
         dst += val_len;
     }
 

@@ -14,9 +14,30 @@
 
 #include <stdint.h>
 #include <string>
-#include "hydra_base_define.h"
+
+#if __WORDSIZE == 32   
+#define _FASTCALL_          __attribute__((__fastcall__))
+#else
+#define _FASTCALL_
+#endif
 
 namespace hydra {
+
+template <int SIZE, typename TLen>
+struct StringUnit
+{
+    union
+    {
+        char str[SIZE];
+        char s[SIZE];   // alias name for str
+    };
+
+    union
+    {
+        TLen len;
+        TLen l;   // alias name for len
+    };
+};
 
 typedef StringUnit<25, unsigned char> isbuf_t;
 

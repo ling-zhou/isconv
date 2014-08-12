@@ -4,7 +4,7 @@
 /// @date 2013-09-24 12:55:13 
 /// @version 1.0.0
 /// @author ling-zhou(周龄), nullzhou@foxmail.com
-/// @namespace isconv
+/// @namespace hydra
 
 #ifndef __ISCONV_BASE_DEFINE_H__
 #define __ISCONV_BASE_DEFINE_H__
@@ -27,7 +27,7 @@ typedef unsigned long  ulong;
 typedef intmax_t       int64;   ///< printf fmt: %jd(man 3 printf)
 typedef uintmax_t      uint64;  ///< printf fmt: %ju(man 3 printf)
 
-namespace isconv {
+namespace hydra {
 
 /// @brief 字符串/二进制块 单元，最大容量为SIZE，实际长度为len
 template <int SIZE, typename TLen>

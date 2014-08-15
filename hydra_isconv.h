@@ -26,7 +26,6 @@ namespace hydra {
 template <int SIZE, typename len_t>
 struct StringUnit
 {
-
     char  s[SIZE]; // content
     len_t l;       // content length
 };
